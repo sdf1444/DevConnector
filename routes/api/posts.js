@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { check, validationResult } = require('express-validator/check');
+const { check, validationResult } = require('express-validator');
 const auth = require('../../middleware/auth');
 
 const Post = require('../../models/Post');
@@ -26,7 +26,7 @@ router.post(
         text: req.body.text,
         name: user.name,
         avatar: user.avatar,
-        user: req.user.id,
+        user: req.user.id
       });
 
       const post = await newPost.save();
@@ -146,7 +146,7 @@ router.post(
   [
     auth,
     checkObjectId('id'),
-    [check('text', 'Text is required').not().isEmpty()],
+    [check('text', 'Text is required').not().isEmpty()]
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -162,7 +162,7 @@ router.post(
         text: req.body.text,
         name: user.name,
         avatar: user.avatar,
-        user: req.user.id,
+        user: req.user.id
       };
 
       post.comments.unshift(newComment);
