@@ -1,4 +1,4 @@
-# DevConnector 2.0
+# DevConnector
 
 > Social network for developers
 
@@ -13,9 +13,8 @@ The master branch of this repository contains all the changes and updates, so if
 
 After completing the course you may want to look through this branch and play about with the changes.
 
-## Changes to GitHub API authentication
+## GitHub API authentication
 
-Since the course was published, GitHub has [depreciated authentication via URL query parameters](https://developer.github.com/changes/2019-11-05-deprecated-passwords-and-authorizations-api/#authenticating-using-query-parameters)
 You can get an access token by following [these instructions](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
 For this app we don't need to add any permissions so don't select any in the _scopes_.
 **DO NOT SHARE ANY TOKENS THAT HAVE PERMISSIONS**
@@ -79,8 +78,6 @@ const headers = {
 
 const gitHubResponse = await axios.get(uri, { headers });
 ```
-
-You can see the full change in [routes/api/profile.js](https://github.com/bradtraversy/devconnector_2.0/blob/4be414c6a54994c18397dba9c927ad67b878508b/routes/api/profile.js#L324)
 
 ## uuid no longer has a default export
 
@@ -272,12 +269,7 @@ Once merged you can push to heroku as above and your site will rebuild and be up
 
 ### Author
 
-Brad Traversy
-[Traversy Media](http://www.traversymedia.com)
-
-### Version
-
-2.0.0
+Spencer Du
 
 ### License
 
