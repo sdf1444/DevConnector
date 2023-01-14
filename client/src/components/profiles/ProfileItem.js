@@ -9,7 +9,7 @@ const ProfileItem = (props) => {
       <div>
         {/* <h2>{name}</h2>  */}
         <p>
-          {status} {props.company && <span> at {props.company}</span>}
+          {props.status} {props.company && <span> at {props.company}</span>}
         </p>
         <p className='my-1'>{props.location && <span>{props.location}</span>}</p>
         {/* <Link to={`/profile/${_id}`} className='btn btn-primary'>
